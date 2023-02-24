@@ -1,0 +1,27 @@
+natural i
+decimal nota1=0, nota2=0, media=0
+natural estado
+
+execute
+{
+    mostrar( "Digite a primeira nota: " )
+    inserir(nota1)
+    mostrar("Digite a segunda nota: " )
+    inserir(nota2)
+
+    media = (nota1 + nota2) / 2
+    mostrar( "A media e de = ", media)
+
+    mostrar( "Digite 1 para continuar calculando as medias" )
+    inserir(estado)
+} quando (estado==1)
+
+condinicial media => 7 {
+ mostrar( "Aprovado" )
+}
+condinter media >= 4 & < 7 {
+ mostrar ( "Prova final" )
+}
+condfinal {
+ mostrar( "Reprovado" )
+}
